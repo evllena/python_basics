@@ -33,4 +33,34 @@ while True:
 
 # Task 4
 
+user_string = list(input('Введите строку, разделяя слова пробелом: ').split())
+order = 1
+for word in user_string:
+    if len(word) > 10:
+        print(order, word[:10])
+    else:
+        print(order, word)
+    order += 1
+
+
+# Task 5
+
+my_list = [42, 23, 16, 15, 8, 4]
+length = len(my_list)
+user_number = input('Введите число: ')
+while not user_number.isdigit():
+    user_number = input('Ошибка! Необходимо ввести целое число: ')
+for item in my_list[::-1]:
+    if int(user_number) > item:
+        continue
+    elif int(user_number) <= item:
+        my_list.insert(my_list.index(item) + 1, int(user_number))
+        print(my_list)
+        break
+if length == len(my_list):
+    my_list.insert(0, int(user_number))
+    print(my_list)
+
+
+# Task 6
 
