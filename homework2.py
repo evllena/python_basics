@@ -9,7 +9,7 @@ for item in first_list:
 # Task 2
 
 
-second_list = list(input('Введите значения списка через пробел').split())
+second_list = list(input('Введите значения списка через пробел: ').split())
 print(second_list)
 for i in range(1, len(second_list), 2):
     second_list[i], second_list[i - 1] = second_list[i - 1], second_list[i]
@@ -64,3 +64,20 @@ if length == len(my_list):
 
 # Task 6
 
+goods_list = []
+features = {'название': '', 'цена': '', 'количество': ''}
+analytics = {'название': [], 'цена': [], 'количество': []}
+num = 0
+while True:
+    if input('Чтобы добавить продукт и его параметры, введите "Y", чтобы выйти - "N": ').upper() == 'Y':
+        num += 1
+        for i in features.keys():
+            line = input(f'Введите значение свойства {i}: ')
+            if i == 'название':
+                features[i] = line
+            else:
+                features[i] = int(line)
+            analytics[i].append(features[i])
+        goods_list.append((num, features))
+        print(goods_list)
+        print(analytics)
