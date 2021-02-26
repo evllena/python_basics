@@ -71,6 +71,30 @@ def sum_all():
 print(sum_all())
 
 
+# Task 6
 
 
+def upper_reg(word):
+    if word.islower():
+        return word.capitalize()
+    else:
+        return "Неверный формат. Слово должно содержать только строчные буквы."
 
+
+print(upper_reg("word"))
+print(upper_reg("Word"))
+print(upper_reg("слово"))
+
+
+def upper_reg1(word):
+    if word.islower():
+        return word.capitalize()
+    else:
+        return False
+
+
+user_input = input("Введите слова, состоящие из строчных букв через пробел: ").split()
+for w in user_input:
+    result = upper_reg1(w)
+    if result:
+        print(upper_reg1(w), end=' ')
