@@ -20,3 +20,14 @@ def user_info(name, lastname, birth_year, city, email, phone):
 
 print(user_info(name="Лена", lastname="Ермолаева", birth_year=1992, city="Красноярск",
                 email="helen.ermolaeva@mail.ru", phone=89135623691))
+
+
+# Task 3
+
+
+def my_func(first, second, third):
+    return (first + second + third) - min(first, second, third)
+
+
+result = my_func(float(input('Введите число: ')), float(input('Введите число: ')), float(input('Введите число: ')))
+print(f"Сумма двух наибольших чисел равняется {result}")
