@@ -53,6 +53,24 @@ print(power1(2, 4))
 print(power2(2, 4))
 
 
+# Task 5
+
+
+def sum_all():
+    sum_numbers = 0
+    while True:
+        num_list = input("Введите числа через пробел, чтобы закончить, введите '&': ").split()
+        for number in num_list:
+            if number == '&':
+                return f"Сумма всех введенных чисел составляет {sum_numbers}"
+            else:
+                sum_numbers += float(number)
+        print(f"Сумма всех введенных чисел составляет {sum_numbers}")
+
+
+print(sum_all())
+
+
 
 
 
