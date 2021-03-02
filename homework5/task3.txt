@@ -1,0 +1,6 @@
+Ivanov 19000
+Petrov 26000
+Sidorov 78500
+Titov 46000
+Vasechkin 56000
+Vanin 15000
