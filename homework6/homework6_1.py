@@ -1,4 +1,7 @@
 from time import sleep
+import colorama
+from colorama import Fore
+colorama.init()
 
 
 class TrafficLight:
@@ -6,17 +9,16 @@ class TrafficLight:
 
     def running(self):
         self._color = "Красный"
-        print(f'Цвет светофора - {self._color}')
+        print(Fore.RED + f'Цвет светофора - {self._color}')
         sleep(7)
         self._color = "Желтый"
-        print(f'Цвет светофора - {self._color}')
+        print(Fore.YELLOW + f'Цвет светофора - {self._color}')
         sleep(2)
         self._color = "Зеленый"
-        print(f'Цвет светофора - {self._color}')
+        print(Fore.GREEN + f'Цвет светофора - {self._color}')
         sleep(4)
 
 
 traffic_light = TrafficLight()
 while True:
     traffic_light.running()
-
