@@ -25,7 +25,7 @@ class Suit(Clothes):
 
     @property
     def tissue_consumption(self):
-        return round(2 * self.parameter + 0.3)
+        return round((2 * self.parameter + 0.3) / 100)
 
 
 coat1 = Coat(42)
