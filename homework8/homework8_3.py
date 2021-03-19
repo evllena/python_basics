@@ -16,7 +16,7 @@ def is_number(string):
 
 new_list = []
 while True:
-    item = input("Введите целое число или F для завершения: ")
+    item = input("Введите число или F для завершения: ")
     if item == 'F':
         print(f"Так выглядит ваш список: ")
         for n in new_list:
@@ -24,7 +24,7 @@ while True:
         break
     try:
         if not is_number(item):
-            raise MyValueError('Значение не будет добавлено в список, так как не является целым числом!')
+            raise MyValueError('Значение не будет добавлено в список, так как не является числом!')
     except MyValueError as my_error:
         print(my_error)
     else:

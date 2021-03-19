@@ -4,16 +4,18 @@ class MyZeroDivision(Exception):
 
 
 a = input("Введите делимое: ")
-b = input("Введите делитель: ")
+while True:
+    b = input("Введите делитель: ")
 
-try:
-    data1, data2 = float(a), float(b)
-    if data2 == 0:
-        raise MyZeroDivision("Ошибка! Деление на 0 невозможно!")
+    try:
+        data1, data2 = float(a), float(b)
+        if data2 == 0:
+            raise MyZeroDivision("Ошибка! Деление на 0 невозможно!")
 
-except ValueError:
-    print("Ошибка!Введите числа!")
-except MyZeroDivision as my_error:
-    print(my_error)
-else:
-    print(round(data1 / data2))
+    except ValueError:
+        print("Ошибка!Введите числа!")
+    except MyZeroDivision as my_error:
+        print(my_error)
+    else:
+        print(round(data1 / data2))
+        break
